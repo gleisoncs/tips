@@ -1,4 +1,4 @@
-# This is sort of examples for dev teams
+# This is sort of tips for dev teams
 
 ## AWS
 
