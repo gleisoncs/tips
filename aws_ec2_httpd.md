@@ -8,7 +8,7 @@ AWS CLI installed locally 
 ## Follow the instructions:
 
 ### Create a script: vi script.txt
-{{{
+```
     #!/bin/bash
     # install httpd (Linux 2 version)
     yum update -y
@@ -16,7 +16,7 @@ AWS CLI installed locally 
     systemctl start httpd
     systemctl enable httpd
     echo "<h1>Hello World from $(hostname -f)</h1>" > /var/www/html/index.html
-}}}
+```
 
 ### Get your VPC id
 {{{
