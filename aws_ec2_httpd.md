@@ -19,37 +19,37 @@ AWS CLI installed locally 
 ```
 
 ### Get your VPC id
-{{{
+```
     aws ec2 describe-vpcs | grep VpcId
-}}}
+```
 
 ### Create a security-group:
-{{{
+```
     aws ec2 create-security-group --group-name my-security-group-test --description "My security group" --vpc-id vpc-1800047d
-}}}
+```
 
 ### Add port to the security group:
-{{{
+```
     aws ec2 authorize-security-group-ingress --group-name my-security-group-test --protocol tcp --port 80 --cidr 0.0.0.0/0
-}}}
+```
 
 ### Create a AWS instance machine, type t2.micro:
-{{{
+```
     aws ec2 run-instances --image-id ami-0c2b8ca1dad447f8a --count 1 --instance-type t2.micro --key-name demo --security-groups my-security-group-test --user-data file://script.txt
-}}}
+```
 
 ### Access the http server
-{{{
+```
     aws ec2 describe-instances | grep PublicIpAddress
     curl http://52.91.69.216:80
-}}}
+```
 
 ### Delete instance
-{{{
+```
     code here
-}}}
+```
 
 ### Delete security group
-{{{
+```
     code here
-}}}
+```
